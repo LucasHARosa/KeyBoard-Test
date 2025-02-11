@@ -10,7 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { RefreshCcw } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const soundAssets: Record<string, string> = {
   sound1: "/typing-sound-01-229863.mp3",
@@ -24,7 +24,7 @@ const KeyboardTest = () => {
   const [keyHistory, setKeyHistory] = useState<string[]>([]);
   const [lastPressedKey, setLastPressedKey] = useState<string | null>(null);
 
-  const playSound = () => {
+  const playSound = useCallback(() => {
     if (sound !== "off") {
       const audioUrl = soundAssets[sound];
       if (audioUrl) {
@@ -32,7 +32,7 @@ const KeyboardTest = () => {
         audio.play();
       }
     }
-  };
+  }, [sound]);
 
   const formatKeyLabel = (code: string) => {
     if (code.startsWith("Key")) return code.slice(3);
@@ -42,25 +42,23 @@ const KeyboardTest = () => {
     return code;
   };
 
-  // Ao pressionar uma tecla, adiciona-a ao estado e atualiza o histórico
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
     e.preventDefault();
     setPressedKeys((prev) => new Set([...prev, e.code]));
     setClickedKeys((prev) => new Set([...prev, e.code]));
     setLastPressedKey(e.code);
     setKeyHistory((prev) => [...prev, e.code]);
     playSound();
-  };
+  }, [playSound]);
 
-  // Remove a tecla pressionada quando o usuário a solta
-  const handleKeyUp = (e: KeyboardEvent) => {
+  const handleKeyUp = useCallback((e: KeyboardEvent) => {
     e.preventDefault();
     setPressedKeys((prev) => {
       const newSet = new Set(prev);
       newSet.delete(e.code);
       return newSet;
     });
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
@@ -69,9 +67,8 @@ const KeyboardTest = () => {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [sound]);
+  }, [handleKeyDown, handleKeyUp]);
 
-  // Botão de reset: limpa o histórico e as teclas atualmente pressionadas
   const resetHistory = () => {
     setPressedKeys(new Set());
     setKeyHistory([]);

@@ -1,8 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/Habit)
+![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/Habit)
+![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/Habit)
+![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/Habit)
+
+# Keyboard Test
+
+Keyboard Test é uma aplicação web desenvolvida com Next.js e TypeScript para testar a funcionalidade de teclados, identificando teclas pressionadas em tempo real. O objetivo é fornecer uma ferramenta simples e eficiente para verificar se todas as teclas de um teclado estão funcionando corretamente.
+
+<p align="center">
+    <img height="200" src="./public/Wallpaper.png" alt="">
+</p>
+
+
+## Interface Principal
+
+Na tela inicial, o usuário encontra um layout interativo que exibe um teclado virtual. Conforme o usuário pressiona as teclas do seu teclado físico, as correspondentes no teclado virtual são destacadas.
+
+## Funcionalidades
+
+- Detecção em Tempo Real: As teclas são destacadas instantaneamente quando pressionadas.
+
+- Verificação Completa: Ideal para identificar teclas com problemas de resposta.
+
+- Layout Responsivo: Funciona bem em diferentes tamanhos de tela.
+
+## Tecnologias Utilizadas
+
+- Next.js: Framework para aplicações React com renderização do lado do servidor.
+
+- TypeScript: Superset do JavaScript que adiciona tipagem estática.
+
+- CSS Modules: Para estilização modular e reutilizável.
 
 ## Getting Started
 
-First, run the development server:
+Primeiro, clone o repositório e instale as dependências:
 
 ```bash
 npm run dev
@@ -14,23 +47,14 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra http://localhost:3000 no navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A forma mais fácil de fazer o deploy desta aplicação é usando a plataforma Vercel, criadora do Next.js.
 
-## Learn More
+Confira a documentação de deploy do Next.js para mais detalhes.
 
-To learn more about Next.js, take a look at the following resources:
+## Contribuições
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
