@@ -1,8 +1,8 @@
 
-![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/KeyBoard-Test)
-![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/KeyBoard-Test)
-![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/KeyBoard-Test)
-![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/KeyBoard-Test)
+![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/Keyboard-Test)
+![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/Keyboard-Test)
+![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/Keyboard-Test)
+![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/Keyboard-Test)
 
 # Keyboard Test
 
