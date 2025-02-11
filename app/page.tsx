@@ -79,9 +79,9 @@ const KeyboardTest = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div className="min-h-screen bg-gray-200 p-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-navy-900 mb-8">
+        <h1 className="text-4xl font-bold text-center text-gray-700 mb-8">
           Teste de Teclado 65% - EN
         </h1>
 
@@ -92,8 +92,8 @@ const KeyboardTest = () => {
 
           <div className="flex items-center gap-4">
 
-            <Select value={sound} onValueChange={setSound}>
-              <SelectTrigger className="w-[180px]">
+            <Select value={sound} onValueChange={setSound} >
+              <SelectTrigger className="w-[180px] rounded bg-gray-50">
                 <SelectValue placeholder="Som" />
               </SelectTrigger>
               <SelectContent>
@@ -108,13 +108,13 @@ const KeyboardTest = () => {
         {/* Histórico de teclas exibido horizontalmente acima do teclado */}
         <div className="flex gap-4 mb-4 w-full">
           {/* Caixa da última tecla pressionada */}
-          <div className=" px-3 bg-white border rounded-lg w-50 h-16 flex items-center justify-center">
+          <div className=" px-3 bg-gray-50 border rounded-lg w-50 h-16 flex items-center justify-center">
             <div className="text-sm text-gray-500">Última tecla pressionada:</div>
             <KeyButton className="w-20" code={formatKeyLabel(lastPressedKey || "-")} label={formatKeyLabel(lastPressedKey || "-")} isPressed={false} />
           </div>
 
           {/* Caixa fixa para o histórico */}
-          <div className="bg-white border rounded-lg w-full h-16 overflow-x-hidden flex items-center px-2 ">
+          <div className="bg-gray-50 border rounded-lg w-full h-16 overflow-x-hidden flex items-center px-2 ">
             <div className="flex gap-2">
               {keyHistory.slice().reverse().map((code, index) => (
                 <div

@@ -6,7 +6,7 @@ interface KeyboardProps {
 }
 
 export const CompactKeyboard = ({ pressedKeys, isClicked }: KeyboardProps) => (
-  <div className="bg-white p-8 rounded-xl shadow-lg">
+  <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
     <div className="space-y-1 flex flex-col gap-1 align-center justify-center">
       {/* Linha 1: 14 teclas */}
       <div className="flex gap-1 grid grid-cols-keyboard-compact">
